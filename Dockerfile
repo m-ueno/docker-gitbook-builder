@@ -16,7 +16,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 ## Install Gitbook
-RUN npm install -d gitbook-cli svgexport -g && \
+RUN npm install -d gitbook-cli svgexport gitbook-plugin-autocover -g && \
     npm cache clean && \
     gitbook -d versions:install && \
     rm -rf /tmp/npm* /tmp/tmp*
