@@ -32,6 +32,8 @@ RUN echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/so
     apt-get install -y --no-install-recommends calibre fonts-noto fonts-noto-cjk locales-all && \
     rm -rf /var/lib/apt/lists/*
 
+RUN npm install -g gitbook-plugin-autocover
+
 ## Install Graphviz for PlantUML
 RUN apt-get update && \
     apt-get install -y --no-install-recommends graphviz && \
